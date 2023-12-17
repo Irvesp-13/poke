@@ -35,16 +35,16 @@ public class NewPokemonBean {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "usuario_id")
-    @JsonIgnoreProperties({"pokemons"})
+    @JsonIgnoreProperties({"pokemon"})
     private UsuarioBean usuarioBean;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "region_id")
-    @JsonIgnoreProperties({"pokemons"})
+    @JsonIgnoreProperties({"pokemon"})
     private RegionBean regionBean;
 
     @ManyToMany
     @JoinTable(name = "newpokemon_has_move", joinColumns = @JoinColumn(name = "newpokemon_id"),
             inverseJoinColumns = @JoinColumn(name = "move_id"))
-    private Set<MoveBean> moves = new HashSet<>();
+    private Set<MoveBean> move = new HashSet<>();
 }

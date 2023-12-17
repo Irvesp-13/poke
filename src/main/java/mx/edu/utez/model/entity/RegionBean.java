@@ -24,5 +24,5 @@ public class RegionBean {
     private String nombre;
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "regionBean")
-    private Set<NewPokemonBean> pokemons = new HashSet<>();
+    private Set<NewPokemonBean> pokemon = new HashSet<>();
 }

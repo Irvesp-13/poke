@@ -30,7 +30,7 @@ public class MoveBean {
     @Column(name = "poder")
     private Integer poder;
 
-    @ManyToMany(mappedBy = "moves")
-    @JsonIgnoreProperties({"moves"})
-    private Set<NewPokemonBean> pokemons = new HashSet<>();
+    @ManyToMany(mappedBy = "move")
+    @JsonIgnoreProperties({"move"})
+    private Set<NewPokemonBean> pokemon = new HashSet<>();
 }

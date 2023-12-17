@@ -14,5 +14,4 @@ public class MoveDto {
     private String nombre;
     private String tipo;
     private Integer poder;
-    private List<Integer> pokemons;
 }
